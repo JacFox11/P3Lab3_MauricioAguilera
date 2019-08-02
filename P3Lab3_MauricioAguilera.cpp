@@ -202,6 +202,7 @@ int main(){
 				for (int i=0; i<zoo->getSabanas().size() ; i++ ){
 					zoo->getSabanas().at(i)->print();  
 				}
+				system("pause");
 				break;
 			}
 			case '4':{
