@@ -3,7 +3,11 @@
 #include <string.h>
 #include <vector>
 #include <bits/stdc++.h>
-#include "Animal.cpp"
+#include "Patas.cpp"
+#include "Pelaje.cpp"
+#include "Ojos.cpp"
+#include "Orejas.cpp"
+#include "Cola.cpp"
 
 #ifndef Animal_CPP
 #define Animal_CPP
