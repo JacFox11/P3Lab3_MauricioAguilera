@@ -22,20 +22,20 @@ int main(){
 				cout<<"...:::AGREGAR ANIMAL:::..."<<endl;
 				string temps;
 				int tempi;
-				bool tempb;
+				
 				cout<<"Ingrese la especie del animal: ";
 				cin>>temps;
-				espera.at(0)->setEspecie(temps);
+				espera.at(c)->setEspecie(temps);
 				
 				system("cls");
 				cout<<"Ingrese el nombre del animal: ";
 				cin>>temps;
-				espera.at(0)->setNombre(temps);
+				espera.at(c)->setNombre(temps);
 				
 				system("cls");
 				cout<<"Ingrese el tamano del animal: ";
 				cin>>tempi;
-				espera.at(0)->setTamano(tempi);
+				espera.at(c)->setTamano(tempi);
 				
 				system("cls");
 				cout<<"...:::Tipo:::..."<<endl;
@@ -47,19 +47,19 @@ int main(){
 				cin>>tempi;
 				switch (tempi){
 					case 1:{
-						espera.at(0)->setTipo("Artico");
+						espera.at(c)->setTipo("Artico");
 						break;
 					}
 					case 2:{
-						espera.at(0)->setTipo("Desertico");
+						espera.at(c)->setTipo("Desertico");
 						break;
 					}
 					case 3:{
-						espera.at(0)->setTipo("Tropical");
+						espera.at(c)->setTipo("Tropical");
 						break;
 					}
 					case 4:{
-						espera.at(0)->setTipo("Sabana");
+						espera.at(c)->setTipo("Sabana");
 						break;
 					}
 				}
@@ -67,24 +67,136 @@ int main(){
 				system("cls");
 				cout<<"Ingrese la cantidad de patas del animal: ";
 				cin>>tempi;
-				espera.at(0)->getPatas()->setCantidad(tempi);
+				espera.at(c)->getPatas()->setCantidad(tempi);
 				
 				system("cls");
 				cout<<"Ingrese el largo de las patas del animal: ";
 				cin>>tempi;
-				espera.at(0)->getPatas()->setLargo(tempi);
+				espera.at(c)->getPatas()->setLargo(tempi);
+				
+				system("cls");
+				cout<<"Ingrese el tipo de las patas del animal(Pezunas, tentaculos. etc): ";
+				cin>>temps;
+				espera.at(c)->getPatas()->setTipo(temps);
+				
+				system("cls");
+				cout<<"Ingrese el color del pelaje del animal: ";
+				cin>>temps;
+				espera.at(c)->getPelaje()->setColor(temps);
+				
+				system("cls");
+				cout<<"Ingrese el grosor del pelaje del animal: ";
+				cin>>tempi;
+				espera.at(c)->getPelaje()->setGrosor(tempi);
+				
+				system("cls");
+				cout<<"Ingrese el largo del pelaje del animal: ";
+				cin>>tempi;
+				espera.at(c)->getPelaje()->setLargo(tempi);
+				
+				system("cls");
+				cout<<"Ingrese el color de los ojos del animal: ";
+				cin>>temps;
+				espera.at(c)->getOjos()->setColor(temps);
+				
+				system("cls");
+				cout<<"...:::VISTA NOCTURNA:::..."<<endl;
+				cout<<"1. Nocturna"<<endl<<
+				"2. No nocturna"<<endl<<
+				"Ingrese una opcion: ";
+				cin>>tempi;
+				switch (tempi){
+					case 1:{
+						espera.at(c)->getOjos()->setNocturno(true);
+						break;
+					}
+					case 2:{
+						espera.at(c)->getOjos()->setNocturno(false);
+						break;
+					}
+				}
+				
+				system("cls");
+				cout<<"Ingrese el tamano de las orejas del animal: ";
+				cin>>tempi;
+				espera.at(c)->getOrejas()->setTamano(tempi);
+				
+				system("cls");
+				cout<<"...:::CAPACIDAD AUDITIVA:::..."<<endl;
+				cout<<"1. Capaz"<<endl<<
+				"2. No Capaz"<<endl<<
+				"Ingrese una opcion: ";
+				cin>>tempi;
+				switch (tempi){
+					case 1:{
+						espera.at(c)->getOrejas()->setCapacidad(true);
+						break;
+					}
+					case 2:{
+						espera.at(c)->getOrejas()->setCapacidad(false);
+						break;
+					}
+				}
+				
+				system("cls");
+				cout<<"Ingrese el largo de la cola del animal: ";
+				cin>>tempi;
+				espera.at(c)->getCola()->setLargo(tempi);
+				
+				system("cls");
+				cout<<"...:::CCOLA PELUDA:::..."<<endl;
+				cout<<"1. Peluda"<<endl<<
+				"2. No Peluda"<<endl<<
+				"Ingrese una opcion: ";
+				cin>>tempi;
+				switch (tempi){
+					case 1:{
+						espera.at(c)->getOrejas()->setCapacidad(true);
+						break;
+					}
+					case 2:{
+						espera.at(c)->getOrejas()->setCapacidad(false);
+						break;
+					}
+				}
+				
+				system("cls");
+				cout<<"Animal exitosamente agregado a la lista de espera"<<endl;
+				c++;
+				system("pause");
 				break;
 			}
 			
 			case '2':{
-				
+				for (int i=0; i<espera.size() ; i++){
+					if (espera.at(i)->getTipo == "Artico" ){
+						zoo->setArtico(espera.at(i) ); 
+					}
+					if (espera.at(i)->getTipo == "Desertico" ){
+						zoo->setDesertico(espera.at(i) ); 
+					}
+					if (espera.at(i)->getTipo == "Tropical" ){
+						zoo->setTropical(espera.at(i) ); 
+					}
+					if (espera.at(i)->getTipo == "Sabana" ){
+						zoo->setSabana(espera.at(i) ); 
+					}
+				}
+				system("cls");
+				cout<<"Animales exitosamente agregados al zoologico"<<endl;
+				c=0;
+				system("pause");
 				break;
 			}
 			case '3':{
-				
+				cout<<"...:::LISTA DE ANIMALES:::..."<<endl;
 				break;
 			}
 			case '4':{
+				system("cls");
+				cout<<"Gracias por usar este programa"<<endl;
+				system("pause");
+				return 0;
 				
 				break;
 			}
@@ -95,6 +207,5 @@ int main(){
 		}
 	}
 	
-	system("pause");
-	return 0;
+	
 }

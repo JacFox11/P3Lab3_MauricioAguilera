@@ -9,24 +9,24 @@ using namespace std;
 
 class Orejas{
 	private:
-		int cantidad;
+		bool capacidad;
 		int tamano;
 		
 	public:
 		Orejas() {
 	    }
 	    
-	    Orejas(int cantidad, string nombre, int tamano) {
-	    	this->cantidad = cantidad;
+	    Orejas(bool capacidad, int tamano) {
+	    	this->capacidad = capacidad;
 	    	this->tamano = tamano;
 	    }
 	
-	    int getCantidad() {
-	        return cantidad;
+	    bool getCapacidad() {
+	        return capacidad;
 	    }
 	
-	    void setCantidad(int cantidad) {
-	        this->cantidad = cantidad;
+	    void setCapacidad(bool capacidad) {
+	        this->capacidad = capacidad;
 	    }
 	
 	    int getTamano() {
