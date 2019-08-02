@@ -190,6 +190,18 @@ int main(){
 			}
 			case '3':{
 				cout<<"...:::LISTA DE ANIMALES:::..."<<endl;
+				for (int i=0; i<zoo->getArticos().size() ; i++ ){
+					zoo->getArticos().at(i)->print();  
+				}
+				for (int i=0; i<zoo->getDeserticos().size() ; i++ ){
+					zoo->getDeserticos().at(i)->print();  
+				}
+				for (int i=0; i<zoo->getTropicales().size() ; i++ ){
+					zoo->getTropicales().at(i)->print();  
+				}
+				for (int i=0; i<zoo->getSabanas().size() ; i++ ){
+					zoo->getSabanas().at(i)->print();  
+				}
 				break;
 			}
 			case '4':{
