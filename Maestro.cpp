@@ -1,7 +1,10 @@
 #include<iostream>
 #include<iomanip> 
 #include <string.h>
+#include <vector>
+#include <bits/stdc++.h>
 #include "Clase.cpp"
+
 
 class Clase;
 
@@ -86,7 +89,7 @@ class Maestro{
 			this->clases.push_back(clase); 
 		}
 		
-		Vector<Clase*> getClases(){
+		vector<Clase*> getClases(){
 			return clases;
 		}
 		
