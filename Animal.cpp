@@ -1,8 +1,3 @@
-#include<iostream>
-#include<iomanip> 
-#include <string.h>
-#include <vector>
-#include <bits/stdc++.h>
 #include "Patas.cpp"
 #include "Pelaje.cpp"
 #include "Ojos.cpp"
@@ -28,15 +23,15 @@ class Animal{
 	public:
 		Animal() {
 			patas= new Patas();
-			pelaje=new pelaje();
-			ojos=new ojos();
+			pelaje=new Pelaje();
+			ojos=new Ojos();
 			orejas=new Orejas();
-			Cola=new Cola();
+			cola=new Cola();
 	    }
 	    
 	    Animal(string especie, string nombre, int tamano, string tipo, Patas* patas, Pelaje* pelaje, Ojos* ojos, Orejas* orejas, Cola* cola) {
 	    	this->especie = especie;
-	    	string nombre;
+	    	this->nombre = nombre;
 	    	this->tamano = tamano;
 	    	this->tipo = tipo;
 	    	this->patas = patas;
@@ -78,48 +73,51 @@ class Animal{
 	        this->tipo = tipo;
 	    }
 	    
-	    Patas getPatas() {
+	    Patas* getPatas() {
 	        return patas;
 	    }
 	
-	    void setPatas(Patas patas) {
+	    void setPatas(Patas* patas) {
 	        this->patas = patas;
 	    }
 	    
-	    Pelaje getPelaje() {
+	    Pelaje* getPelaje() {
 	        return pelaje;
 	    }
 	
-	    void setPelaje(Pelaje pelaje) {
+	    void setPelaje(Pelaje* pelaje) {
 	        this->pelaje = pelaje;
 	    }
 	    
-	    Ojos getOjos() {
+	    Ojos* getOjos() {
 	        return ojos;
 	    }
 	
-	    void setOjos(Ojos ojos) {
+	    void setOjos(Ojos* ojos) {
 	        this->ojos = ojos;
 	    }
 	    
-	    Orejas getOrejas() {
+	    Orejas* getOrejas() {
 	        return orejas;
 	    }
 	
-	    void setOrejas(Orejas orejas) {
+	    void setOrejas(Orejas* orejas) {
 	        this->orejas = orejas;
 	    }
 	    
-	    Cola getCola() {
+	    Cola* getCola() {
 	        return cola;
 	    }
 	
-	    void setCola(Cola cola) {
+	    void setCola(Cola* cola) {
 	        this->cola = cola;
 	    }
 	    
 	    void print(){
 	    	cout<<"Especie: "<<especie<<setw(10)<<"Nombre: "<<nombre<<setw(10)<<"Tamano: "<<tamano<<setw(10)<<"Tipo: "<<tipo<<endl<<endl;
+		}
+		
+		~Animal(){
 		}
 };
 

@@ -14,10 +14,10 @@ class Zoologico{
 		string nombre;
 		int tamano;
 		int capacidad;
-		vector<Animal*> artica;
-		vector<Animal*> desertica;
-		vector<Animal*> tropical;
-		vector<Animal*> sabana;
+		vector<Animal*> articos;
+		vector<Animal*> deserticos;
+		vector<Animal*> tropicales;
+		vector<Animal*> sabanas;
 		
 	public:
 		Zoologico() {
@@ -54,20 +54,71 @@ class Zoologico{
 	        this->capacidad = capacidad;
 	    }
 	    
-	    void setArtica(vector<Animal*> artica){
-	    	this->artica = artica;
+	    void setArticos(vector<Animal*> articos){
+	    	this->articos = articos;
 		}
 		
-		void setAnimal(Animal* animal){
-			this->artica.push_back(animal); 
+		void setArtico(Animal* animal){
+			this->articos.push_back(animal); 
 		}
 		
-		vector<Animal*> getArtica(){
-			return artica;
+		vector<Animal*> getArticos(){
+			return articos;
 		}
 		
-		void remAnimal(int p){
-			artica.erase(artica.begin() + p); 
+		void remArtico(int p){
+			articos.erase(articos.begin() + p); 
+		}
+		
+		void setDeserticos(vector<Animal*> deserticos){
+	    	this->deserticos = deserticos;
+		}
+		
+		void setDesertico(Animal* animal){
+			this->deserticos.push_back(animal); 
+		}
+		
+		vector<Animal*> getDeserticos(){
+			return deserticos;
+		}
+		
+		void remDesertico(int p){
+			deserticos.erase(deserticos.begin() + p); 
+		}
+		
+		void setTropicales(vector<Animal*> tropicales){
+	    	this->tropicales = tropicales;
+		}
+		
+		void setTropical(Animal* animal){
+			this->tropicales.push_back(animal); 
+		}
+		
+		vector<Animal*> getTropicales(){
+			return tropicales;
+		}
+		
+		void remTropical(int p){
+			tropicales.erase(tropicales.begin() + p); 
+		}
+		
+		void setSabanas(vector<Animal*> sabanas){
+	    	this->sabanas = sabanas;
+		}
+		
+		void setSabana(Animal* animal){
+			this->sabanas.push_back(animal); 
+		}
+		
+		vector<Animal*> getSabanas(){
+			return sabanas;
+		}
+		
+		void remSabana(int p){
+			sabanas.erase(sabanas.begin() + p); 
+		}
+		
+		~Zoologico(){
 		}
 };
 
