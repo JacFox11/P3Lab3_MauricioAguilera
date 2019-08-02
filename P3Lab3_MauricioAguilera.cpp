@@ -169,16 +169,16 @@ int main(){
 			
 			case '2':{
 				for (int i=0; i<espera.size() ; i++){
-					if (espera.at(i)->getTipo == "Artico" ){
+					if (espera.at(i)->getTipo() == "Artico" ){
 						zoo->setArtico(espera.at(i) ); 
 					}
-					if (espera.at(i)->getTipo == "Desertico" ){
+					if (espera.at(i)->getTipo() == "Desertico" ){
 						zoo->setDesertico(espera.at(i) ); 
 					}
-					if (espera.at(i)->getTipo == "Tropical" ){
+					if (espera.at(i)->getTipo() == "Tropical" ){
 						zoo->setTropical(espera.at(i) ); 
 					}
-					if (espera.at(i)->getTipo == "Sabana" ){
+					if (espera.at(i)->getTipo() == "Sabana" ){
 						zoo->setSabana(espera.at(i) ); 
 					}
 				}
