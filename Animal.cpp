@@ -36,8 +36,9 @@ class Animal{
 	    
 	    Animal(string especie, string nombre, int tamano, string tipo, Patas* patas, Pelaje* pelaje, Ojos* ojos, Orejas* orejas, Cola* cola) {
 	    	this->especie = especie;
+	    	string nombre;
 	    	this->tamano = tamano;
-	    	this->capacidad = capacidad;
+	    	this->tipo = tipo;
 	    	this->patas = patas;
 	    	this->pelaje = pelaje;
 	    	this->ojos = ojos;
