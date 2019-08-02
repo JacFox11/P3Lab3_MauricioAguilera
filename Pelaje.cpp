@@ -46,6 +46,9 @@ class Pelaje{
 	    void setColor(string color) {
 	        this->color = color;
 	    }
+	    
+	    ~Pelaje(){
+		}
 };
 
 #endif

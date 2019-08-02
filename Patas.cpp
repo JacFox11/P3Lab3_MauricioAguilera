@@ -46,6 +46,9 @@ class Patas{
 	    void setTipo(string tipo) {
 	        this->tipo = tipo;
 	    }
+	    
+	    ~Patas(){
+		}
 };
 
 #endif
